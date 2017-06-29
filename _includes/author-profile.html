@@ -22,17 +22,18 @@
       <p class="author__bio" itemprop="description">
         {{ author.bio }}
       </p>
-    {% endif %}
+    {% endif %} 
+    {% if author.location %}
+      <li style="list-style-type: none;" itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+        <i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> <span itemprop="name">{{ author.location }}</span>
+      </li>
   </div>
+  {% endif %}
 
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
-    <ul class="author__urls social-icons">
-      {% if author.location %}
-        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
-          <i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> <span itemprop="name">{{ author.location }}</span>
-        </li>
-      {% endif %}
+    <ul class="author__urls contacts">
+
 
       {% if author.uri %}
         <li>
@@ -55,6 +56,14 @@
         <li>
           <a href="https://keybase.io/{{ author.keybase }}" itemprop="sameAs">
             <i class="fa fa-fw fa-key" aria-hidden="true"></i> Keybase
+          </a>
+        </li>
+      {% endif %}
+      
+      {% if author.github %}
+        <li>
+          <a href="https://github.com/{{ author.github }}" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
           </a>
         </li>
       {% endif %}
@@ -123,13 +132,7 @@
         </li>
       {% endif %}
 
-      {% if author.github %}
-        <li>
-          <a href="https://github.com/{{ author.github }}" itemprop="sameAs">
-            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
-          </a>
-        </li>
-      {% endif %}
+
 
       {% if author.stackoverflow %}
         <li>
