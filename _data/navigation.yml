@@ -1,12 +1,33 @@
-# main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Machine Learning"
+    url: /machine-learning/
+  - title: "Finance"
+    url: /finance/
+  - title: "Open Source"
+    url: /open-source/
+  - title: "Automation"
+    url: /automation/
+  - title: "Culture"
+    url: /culture/
+  - title: "Post Archive"
+    url: /year-archive/
+  - title: "All Tags"
+    url: /tags/
+  - title: "Credits"
+    url: /credits/
+  - title: "Sitemap"
+    url: /sitemap/
+    
+finance-sidebar:
+  - title: Equities
+    children:
+      - title: "Derivative Pricing"
+        url: /credits/
+      - title: "CAPM"
+        url: /2000/12/17/Test-Post.html
+  - title: Bonds
+    children:
+      - title: "Government"
+        url: /credits/
+      - title: "Corporate"
+        url: /docs/structure/

@@ -5,7 +5,9 @@ title: "Automation Posts"
 author_profile: true
 ---
 
-{% for post in site.categories.automation %}
-    {% include archive-single.html %}
+{% for post in site.posts %}
+    {% if post.tags contains 'automation' %} 
+      {% include archive-single.html %}
+    {% endif %}
 {% endfor %}
 
